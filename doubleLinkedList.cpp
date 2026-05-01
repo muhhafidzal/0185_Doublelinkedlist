@@ -31,7 +31,7 @@ public:
         // Step 1: Allocate memory for new node
         Node *newNode = new Node();
 
-        // Step 2: Assign value to the data field
+        // Step 2: Assign value to the data fields
         newNode->noMhs = nim;
 
         // Step 3: Insert at beginning if list is empty or nim is smallest
@@ -55,4 +55,22 @@ public:
             // Step 7: START = newNode
             START = newNode;
             return;
+        }
+
+        // insert in between node
+        // Step 8: Locate position for insertion
+        Node *current = START;
+        while (current->next != NULL && current->next->noMhs < nim)
+        {
+            current = current->next;
+        }
+
+        if (current->next != NULL && nim == current->next->noMhs)
+        {
+            cout << "\nDuplicate roll numbers not allowed" << endl;
+            return;
+        }
+
+        
     }
+}

@@ -135,7 +135,7 @@ public:
             cout << "\nList is empty" << endl;
             return;
         }
-        
+
         // Step 1: Mark first node as currentNode
         Node *currentNode = START;
 
@@ -151,5 +151,14 @@ public:
             currentNode = currentNode->next;
             i++;
         } 
+    }
+
+    void revtraverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
     }
 }

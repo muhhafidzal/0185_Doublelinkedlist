@@ -160,7 +160,7 @@ public:
             cout << "\nList is empty" << endl;
             return;
         }
-        
+
         // Step 1: Move to last node
         Node *currentNode = START;
         int i = 0;
@@ -179,6 +179,15 @@ public:
             // Step 3: Move to previous node
             currentNode = currentNode->prev;
             i--;
+        }
+    }
+
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
         }
     }
 }
